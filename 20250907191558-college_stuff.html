@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-12-25 Thu 14:37 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>College Syllabus</title>
+<meta name="author" content="ro" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="http://thomasf.github.io/solarized-css/solarized-dark.min.css" />
+
+<script src="http://thomasf.github.io/solarized-css/org-info.min.js">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license-end
+</script>
+
+<script>
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "1");
+org_html_manager.setup();  // activate after the parameters are set
+// @license-end
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">College Syllabus</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgce2a67f">Papers</a>
+<ul>
+<li><a href="#org5cb664b">Cognitive Psychology <code>[0/101]</code></a>
+<ul>
+<li><a href="#org3bd36b9">Unit 1: Cognitive Psychology – An Introduction <code>[0/11]</code></a></li>
+<li><a href="#org4de3fe6">Unit 2: Attention and Perception <code>[0/22]</code></a></li>
+<li><a href="#orgde40221">Unit 3: Memory <code>[0/20]</code></a></li>
+<li><a href="#orgb358646">Unit 4: Thinking, Problem Solving, and Decision Making <code>[0/20]</code></a></li>
+<li><a href="#org3640f3e">Unit 5: Language <code>[0/23]</code></a></li>
+</ul>
+</li>
+<li><a href="#orga7b6ff0">Personality Psychology <code>[0/53]</code></a>
+<ul>
+<li><a href="#orgb3f7926">Unit 1: Nature of Personality</a></li>
+<li><a href="#orgcda8212">Unit 2: Psychoanalytic and Neo-Psychoanalytic Theories</a></li>
+<li><a href="#org2ab4de0">Unit 3: Behavioristic and Humanistic Theories</a></li>
+<li><a href="#org8260a4c">Unit 4: Cognitive, Interpersonal, and Factor Analytical Theories</a></li>
+<li><a href="#org5ff1cf5">Unit 5: Lifespan and Trait Perspectives</a></li>
+</ul>
+</li>
+<li><a href="#org10fa544">Research Methods &amp; Statistics <code>[0/62]</code></a>
+<ul>
+<li><a href="#org16bdf87">Unit 1: Scientific Research – Meaning, Characteristics &amp; Ethics</a></li>
+<li><a href="#orgff2dacf">Unit 2: Psychological Testing</a></li>
+<li><a href="#org379cfb8">Unit 3: Descriptive Statistics</a></li>
+<li><a href="#orgddaebaa">Unit 4: Measurement and Sampling Techniques</a></li>
+<li><a href="#org7096f22">Unit 5: Research Approaches</a></li>
+</ul>
+</li>
+<li><a href="#org10fad83">Biopsychology / Physiological Psychology <code>[0/61]</code></a>
+<ul>
+<li><a href="#org1ed4ebb">Unit 1: Brain, Behaviour, and Nervous System</a></li>
+<li><a href="#org37bda48">Unit 2: Neuropsychology</a></li>
+<li><a href="#orgd2df040">Unit 3: Behaviour Genetics</a></li>
+<li><a href="#org689bc01">Unit 4: Brain and Internal Regulatory States</a></li>
+<li><a href="#org68fd430">Unit 5: Sensation, Perception, and Movement</a></li>
+</ul>
+</li>
+<li><a href="#orgee1eda9">Health Psychology <code>[0/74]</code></a>
+<ul>
+<li><a href="#org63378f8">Unit I: Introduction</a></li>
+<li><a href="#org2b0322a">Unit II: Stress and Modification</a></li>
+<li><a href="#orgd750926">Unit III: Addictive Behaviour and Lifestyle Disorders</a></li>
+<li><a href="#orgfde18da">Unit IV: Pain</a></li>
+<li><a href="#org00924b4">Unit V: Intervention</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgce2a67f" class="outline-2">
+<h2 id="orgce2a67f">Papers</h2>
+<div class="outline-text-2" id="text-orgce2a67f">
+</div>
+<div id="outline-container-org5cb664b" class="outline-3">
+<h3 id="org5cb664b">Cognitive Psychology <code>[0/101]</code></h3>
+<div class="outline-text-3" id="text-org5cb664b">
+</div>
+<div id="outline-container-org3bd36b9" class="outline-4">
+<h4 id="org3bd36b9">Unit 1: Cognitive Psychology – An Introduction <code>[0/11]</code></h4>
+<div class="outline-text-4" id="text-org3bd36b9">
+</div>
+<ul class="org-ul">
+<li><a id="org850867c"></a><span class="todo TODO">TODO</span> History of cognitive psychology<br /></li>
+<li><a id="org6a96dd8"></a><span class="todo TODO">TODO</span> Nature of cognitive psychology<br /></li>
+<li><a id="orga27c337"></a><span class="todo TODO">TODO</span> Current status (including cognitive and computational neuroscience)<br /></li>
+<li><a id="orgbd04137"></a><span class="todo TODO">TODO</span> Future trends and issues<br /></li>
+<li><a id="org4b9ce6d"></a><span class="todo TODO">TODO</span> Mental representations<br /></li>
+<li><a id="org4292606"></a><span class="todo TODO">TODO</span> Human information processing<br /></li>
+<li><a id="org2a40b14"></a><span class="todo TODO">TODO</span> Feature analysis<br /></li>
+<li><a id="org9f4fe14"></a><span class="todo TODO">TODO</span> Hierarchical organization<br /></li>
+<li><a id="org7016085"></a><span class="todo TODO">TODO</span> Bottom-up vs. top-down processing<br /></li>
+<li><a id="orga0a29cd"></a><span class="todo TODO">TODO</span> Parallel vs. serial processing<br /></li>
+<li><a id="org24d1b6e"></a><span class="todo TODO">TODO</span> Debate on consciousness in cognitive psychology<br /></li>
+</ul>
+</div>
+<div id="outline-container-org4de3fe6" class="outline-4">
+<h4 id="org4de3fe6">Unit 2: Attention and Perception <code>[0/22]</code></h4>
+<div class="outline-text-4" id="text-org4de3fe6">
+</div>
+<ul class="org-ul">
+<li><a id="org9e7a341"></a><span class="todo TODO">TODO</span> Meaning of attention<br /></li>
+<li><a id="org6ae45fa"></a><span class="todo TODO">TODO</span> Divided attention<br /></li>
+<li><a id="orgf3e5e78"></a><span class="todo TODO">TODO</span> Selective attention<br /></li>
+<li><a id="org7ef702a"></a><span class="todo TODO">TODO</span> Sustained attention<br /></li>
+<li><a id="orge97a76b"></a><span class="todo TODO">TODO</span> Bottleneck theories of attention<br /></li>
+<li><a id="orgac58b76"></a><span class="todo TODO">TODO</span> Schneider &amp; Shiffrin’s automated vs. controlled processing<br /></li>
+<li><a id="org5ddb00c"></a><span class="todo TODO">TODO</span> Treisman’s feature integration theory<br /></li>
+<li><a id="org424e7f4"></a><span class="todo TODO">TODO</span> Principles of perception (all modalities)<br /></li>
+<li><a id="orgd9fdb9d"></a><span class="todo TODO">TODO</span> Vision<br /></li>
+<li><a id="org946429c"></a><span class="todo TODO">TODO</span> Brightness<br /></li>
+<li><a id="org728efaa"></a><span class="todo TODO">TODO</span> Colour<br /></li>
+<li><a id="org215a06c"></a><span class="todo TODO">TODO</span> Form<br /></li>
+<li><a id="org2443226"></a><span class="todo TODO">TODO</span> Location<br /></li>
+<li><a id="orgfd42a0d"></a><span class="todo TODO">TODO</span> Visual pattern recognition<br /></li>
+<li><a id="orge4ca3fc"></a><span class="todo TODO">TODO</span> Template matching model<br /></li>
+<li><a id="orgff626f9"></a><span class="todo TODO">TODO</span> Prototype model<br /></li>
+<li><a id="org19e2f6c"></a><span class="todo TODO">TODO</span> Distinctive features model<br /></li>
+<li><a id="org56647da"></a><span class="todo TODO">TODO</span> Computational models<br /></li>
+<li><a id="org58ef7d3"></a><span class="todo TODO">TODO</span> Audition<br /></li>
+<li><a id="org48f6890"></a><span class="todo TODO">TODO</span> Pitch<br /></li>
+<li><a id="org3385061"></a><span class="todo TODO">TODO</span> Intensity<br /></li>
+<li><a id="org1d7cdb0"></a><span class="todo TODO">TODO</span> Localization<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgde40221" class="outline-4">
+<h4 id="orgde40221">Unit 3: Memory <code>[0/20]</code></h4>
+<div class="outline-text-4" id="text-orgde40221">
+</div>
+<ul class="org-ul">
+<li><a id="org336334f"></a><span class="todo TODO">TODO</span> Meaning of memory<br /></li>
+<li><a id="org58b279e"></a><span class="todo TODO">TODO</span> Types of memory<br /></li>
+<li><a id="org51afbcc"></a><span class="todo TODO">TODO</span> Atkinson–Shiffrin model<br /></li>
+<li><a id="org43b865e"></a><span class="todo TODO">TODO</span> Levels of processing approach<br /></li>
+<li><a id="org1bacc3d"></a><span class="todo TODO">TODO</span> Tulving’s model<br /></li>
+<li><a id="org91a72d8"></a><span class="todo TODO">TODO</span> Parallel Distributed Processing approach<br /></li>
+<li><a id="org2c8b773"></a><span class="todo TODO">TODO</span> Semantic memory<br /></li>
+<li><a id="org68ab6d5"></a><span class="todo TODO">TODO</span> Feature comparison model<br /></li>
+<li><a id="org99a71e0"></a><span class="todo TODO">TODO</span> Network model<br /></li>
+<li><a id="orgbb6ba7b"></a><span class="todo TODO">TODO</span> Exemplar approach<br /></li>
+<li><a id="orgdb4b735"></a><span class="todo TODO">TODO</span> Prototype approach<br /></li>
+<li><a id="org75058a6"></a><span class="todo TODO">TODO</span> Schemas<br /></li>
+<li><a id="orgf3ccc26"></a><span class="todo TODO">TODO</span> Metamemory<br /></li>
+<li><a id="org6a3814b"></a><span class="todo TODO">TODO</span> Forgetting – meaning<br /></li>
+<li><a id="org494b8a5"></a><span class="todo TODO">TODO</span> Theories of forgetting<br /></li>
+<li><a id="org6ade4b2"></a><span class="todo TODO">TODO</span> Factors affecting forgetting<br /></li>
+<li><a id="org2bd4d19"></a><span class="todo TODO">TODO</span> Mental imagery<br /></li>
+<li><a id="org7053ca4"></a><span class="todo TODO">TODO</span> Cognitive maps<br /></li>
+<li><a id="org2a0b124"></a><span class="todo TODO">TODO</span> Confabulation<br /></li>
+<li><a id="orge929b46"></a><span class="todo TODO">TODO</span> False memory<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgb358646" class="outline-4">
+<h4 id="orgb358646">Unit 4: Thinking, Problem Solving, and Decision Making <code>[0/20]</code></h4>
+<div class="outline-text-4" id="text-orgb358646">
+</div>
+<ul class="org-ul">
+<li><a id="org4bfc38a"></a><span class="todo TODO">TODO</span> Categorization – nature<br /></li>
+<li><a id="orgabb4af8"></a><span class="todo TODO">TODO</span> Theories of categorization<br /></li>
+<li><a id="org8010788"></a><span class="todo TODO">TODO</span> Natural categories<br /></li>
+<li><a id="org863f00f"></a><span class="todo TODO">TODO</span> Meaning of problem solving<br /></li>
+<li><a id="org479e4e5"></a><span class="todo TODO">TODO</span> Problem-solving strategies<br /></li>
+<li><a id="org9fac70a"></a><span class="todo TODO">TODO</span> Heuristics<br /></li>
+<li><a id="orgad5deaa"></a><span class="todo TODO">TODO</span> Factors influencing problem solving<br /></li>
+<li><a id="org11705c8"></a><span class="todo TODO">TODO</span> Insight problem solving<br /></li>
+<li><a id="org8482c52"></a><span class="todo TODO">TODO</span> Transfer of learning<br /></li>
+<li><a id="orgec1a3d7"></a><span class="todo TODO">TODO</span> Creativity<br /></li>
+<li><a id="org5623950"></a><span class="todo TODO">TODO</span> Reasoning – nature<br /></li>
+<li><a id="org13cc1a8"></a><span class="todo TODO">TODO</span> Conditional reasoning<br /></li>
+<li><a id="org5a1b57d"></a><span class="todo TODO">TODO</span> Syllogistic reasoning<br /></li>
+<li><a id="org1fe47c4"></a><span class="todo TODO">TODO</span> Decision-making process<br /></li>
+<li><a id="orgf45d31d"></a><span class="todo TODO">TODO</span> Representative heuristic<br /></li>
+<li><a id="org9b7de93"></a><span class="todo TODO">TODO</span> Availability heuristic<br /></li>
+<li><a id="org8d64c34"></a><span class="todo TODO">TODO</span> Anchoring and adjustment<br /></li>
+<li><a id="org1fa9add"></a><span class="todo TODO">TODO</span> Analogy<br /></li>
+<li><a id="org2d9d4cc"></a><span class="todo TODO">TODO</span> Simulation<br /></li>
+<li><a id="org01adf1e"></a><span class="todo TODO">TODO</span> Framing effect<br /></li>
+</ul>
+</div>
+<div id="outline-container-org3640f3e" class="outline-4">
+<h4 id="org3640f3e">Unit 5: Language <code>[0/23]</code></h4>
+<div class="outline-text-4" id="text-org3640f3e">
+</div>
+<ul class="org-ul">
+<li><a id="org2179deb"></a><span class="todo TODO">TODO</span> Language comprehension<br /></li>
+<li><a id="org9b1e17c"></a><span class="todo TODO">TODO</span> Understanding spoken language<br /></li>
+<li><a id="org8e5a447"></a><span class="todo TODO">TODO</span> Speech perception<br /></li>
+<li><a id="org19f2dbf"></a><span class="todo TODO">TODO</span> Speech comprehension<br /></li>
+<li><a id="org0da9eaa"></a><span class="todo TODO">TODO</span> Structure of human language<br /></li>
+<li><a id="org5b3b61d"></a><span class="todo TODO">TODO</span> Theory of constituent processing<br /></li>
+<li><a id="org7568e51"></a><span class="todo TODO">TODO</span> Chomsky’s transformational grammar<br /></li>
+<li><a id="org5b582c7"></a><span class="todo TODO">TODO</span> Factors affecting listening<br /></li>
+<li><a id="org05d4b90"></a><span class="todo TODO">TODO</span> Reading<br /></li>
+<li><a id="org8120d98"></a><span class="todo TODO">TODO</span> Word recognition theories<br /></li>
+<li><a id="orgce62641"></a><span class="todo TODO">TODO</span> Factors affecting reading comprehension<br /></li>
+<li><a id="org9cdbe32"></a><span class="todo TODO">TODO</span> Meta-comprehension<br /></li>
+<li><a id="org7befdb9"></a><span class="todo TODO">TODO</span> Speaking<br /></li>
+<li><a id="orgd5804aa"></a><span class="todo TODO">TODO</span> Selecting content<br /></li>
+<li><a id="org2d3764b"></a><span class="todo TODO">TODO</span> Speech errors<br /></li>
+<li><a id="orgb4d87e2"></a><span class="todo TODO">TODO</span> Gestures<br /></li>
+<li><a id="orgc55b543"></a><span class="todo TODO">TODO</span> Social context<br /></li>
+<li><a id="orga6b33c6"></a><span class="todo TODO">TODO</span> Writing<br /></li>
+<li><a id="orge9a58a4"></a><span class="todo TODO">TODO</span> Cognitive tasks in writing<br /></li>
+<li><a id="org8f4078b"></a><span class="todo TODO">TODO</span> Comparison of speaking and writing<br /></li>
+<li><a id="orgc3ad736"></a><span class="todo TODO">TODO</span> Bilingualism – advantages<br /></li>
+<li><a id="orgb2e0c5a"></a><span class="todo TODO">TODO</span> Bilingualism – disadvantages<br /></li>
+<li><a id="orge19a534"></a><span class="todo TODO">TODO</span> Code switching<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga7b6ff0" class="outline-3">
+<h3 id="orga7b6ff0">Personality Psychology <code>[0/53]</code></h3>
+<div class="outline-text-3" id="text-orga7b6ff0">
+</div>
+<div id="outline-container-orgb3f7926" class="outline-4">
+<h4 id="orgb3f7926">Unit 1: Nature of Personality</h4>
+<div class="outline-text-4" id="text-orgb3f7926">
+</div>
+<ul class="org-ul">
+<li><a id="orgf178de8"></a><span class="todo TODO">TODO</span> Meaning of personality<br /></li>
+<li><a id="org7965831"></a><span class="todo TODO">TODO</span> Background and methodology<br /></li>
+<li><a id="orgd8bbef0"></a><span class="todo TODO">TODO</span> Historical foundations<br /></li>
+<li><a id="org71d848f"></a><span class="todo TODO">TODO</span> Need for personality theory<br /></li>
+<li><a id="org2a0a02b"></a><span class="todo TODO">TODO</span> Key concepts<br /></li>
+<li><a id="org0020aaf"></a><span class="todo TODO">TODO</span> Major components of personality theories<br /></li>
+<li><a id="orga7f35bc"></a><span class="todo TODO">TODO</span> Issues in personality theories<br /></li>
+<li><a id="orgf589c43"></a><span class="todo TODO">TODO</span> Dimensions for evaluation<br /></li>
+<li><a id="org103c43f"></a><span class="todo TODO">TODO</span> Self-report measures<br /></li>
+<li><a id="orgf2610ac"></a><span class="todo TODO">TODO</span> Biological measures<br /></li>
+<li><a id="org8b6e372"></a><span class="todo TODO">TODO</span> Behavioural assessment<br /></li>
+<li><a id="orge182d27"></a><span class="todo TODO">TODO</span> Projective techniques<br /></li>
+<li><a id="orgde56f91"></a><span class="todo TODO">TODO</span> Clinical interviews<br /></li>
+<li><a id="orgcf50dce"></a><span class="todo TODO">TODO</span> Online and social media analysis<br /></li>
+<li><a id="orga0e126a"></a><span class="todo TODO">TODO</span> Current status of personality research<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgcda8212" class="outline-4">
+<h4 id="orgcda8212">Unit 2: Psychoanalytic and Neo-Psychoanalytic Theories</h4>
+<div class="outline-text-4" id="text-orgcda8212">
+</div>
+<ul class="org-ul">
+<li><a id="org5239808"></a><span class="todo TODO">TODO</span> Freud’s theory of personality<br /></li>
+<li><a id="org192a159"></a><span class="todo TODO">TODO</span> Alfred Adler<br /></li>
+<li><a id="org2cf519b"></a><span class="todo TODO">TODO</span> Carl Jung<br /></li>
+<li><a id="org91ba181"></a><span class="todo TODO">TODO</span> Karen Horney<br /></li>
+<li><a id="org776b40a"></a><span class="todo TODO">TODO</span> Erich Fromm<br /></li>
+<li><a id="orgbcbbfce"></a><span class="todo TODO">TODO</span> Erik Erikson<br /></li>
+<li><a id="org329b875"></a><span class="todo TODO">TODO</span> Current status of research and applications<br /></li>
+</ul>
+</div>
+<div id="outline-container-org2ab4de0" class="outline-4">
+<h4 id="org2ab4de0">Unit 3: Behavioristic and Humanistic Theories</h4>
+<div class="outline-text-4" id="text-org2ab4de0">
+</div>
+<ul class="org-ul">
+<li><a id="orgbb5dfbd"></a><span class="todo TODO">TODO</span> John B. Watson<br /></li>
+<li><a id="org949ed78"></a><span class="todo TODO">TODO</span> B. F. Skinner<br /></li>
+<li><a id="orga91303e"></a><span class="todo TODO">TODO</span> Albert Bandura<br /></li>
+<li><a id="orgf619a7c"></a><span class="todo TODO">TODO</span> Miller and Dollard<br /></li>
+<li><a id="org700a841"></a><span class="todo TODO">TODO</span> Julian Rotter<br /></li>
+<li><a id="org5735422"></a><span class="todo TODO">TODO</span> GOMS model<br /></li>
+<li><a id="orgc804d15"></a><span class="todo TODO">TODO</span> Abraham Maslow<br /></li>
+<li><a id="orgc2600ab"></a><span class="todo TODO">TODO</span> Carl Rogers<br /></li>
+<li><a id="org16abe53"></a><span class="todo TODO">TODO</span> Harry Stack Sullivan<br /></li>
+<li><a id="org6fb6b8c"></a><span class="todo TODO">TODO</span> Martin Seligman<br /></li>
+<li><a id="org0005ff6"></a><span class="todo TODO">TODO</span> Current research and applications<br /></li>
+</ul>
+</div>
+<div id="outline-container-org8260a4c" class="outline-4">
+<h4 id="org8260a4c">Unit 4: Cognitive, Interpersonal, and Factor Analytical Theories</h4>
+<div class="outline-text-4" id="text-org8260a4c">
+</div>
+<ul class="org-ul">
+<li><a id="orgc09a438"></a><span class="todo TODO">TODO</span> George Kelly<br /></li>
+<li><a id="org0886dc8"></a><span class="todo TODO">TODO</span> Rollo May<br /></li>
+<li><a id="org1d4e06c"></a><span class="todo TODO">TODO</span> Kurt Lewin – Field theory<br /></li>
+<li><a id="org3cc384a"></a><span class="todo TODO">TODO</span> Five Factor Model (OCEAN)<br /></li>
+<li><a id="org049f80a"></a><span class="todo TODO">TODO</span> Development of Five Factor Model<br /></li>
+<li><a id="org9d02863"></a><span class="todo TODO">TODO</span> Eric Berne – Transactional Analysis<br /></li>
+<li><a id="org4d2ff48"></a><span class="todo TODO">TODO</span> Marvin Zuckerman<br /></li>
+<li><a id="org75ecd9e"></a><span class="todo TODO">TODO</span> Current research and applications<br /></li>
+</ul>
+</div>
+<div id="outline-container-org5ff1cf5" class="outline-4">
+<h4 id="org5ff1cf5">Unit 5: Lifespan and Trait Perspectives</h4>
+<div class="outline-text-4" id="text-org5ff1cf5">
+</div>
+<ul class="org-ul">
+<li><a id="org8bbb493"></a><span class="todo TODO">TODO</span> Erik Erikson – identity formation<br /></li>
+<li><a id="org7dac439"></a><span class="todo TODO">TODO</span> Ego crises<br /></li>
+<li><a id="org21d086e"></a><span class="todo TODO">TODO</span> Trait approaches<br /></li>
+<li><a id="org13f3a03"></a><span class="todo TODO">TODO</span> Lexical approach<br /></li>
+<li><a id="org175eab8"></a><span class="todo TODO">TODO</span> Statistical approach<br /></li>
+<li><a id="orgd71c831"></a><span class="todo TODO">TODO</span> Theoretical approach<br /></li>
+<li><a id="orga262f52"></a><span class="todo TODO">TODO</span> Gordon Allport – culture<br /></li>
+<li><a id="orgf24f96a"></a><span class="todo TODO">TODO</span> Functional equivalence<br /></li>
+<li><a id="org08b383f"></a><span class="todo TODO">TODO</span> Personal dispositions<br /></li>
+<li><a id="org3f8d453"></a><span class="todo TODO">TODO</span> Eysenck’s hierarchical model<br /></li>
+<li><a id="orge5afa48"></a><span class="todo TODO">TODO</span> Guilford<br /></li>
+<li><a id="orga5fc3a8"></a><span class="todo TODO">TODO</span> Cattell’s 16 Personality Factor system<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org10fa544" class="outline-3">
+<h3 id="org10fa544">Research Methods &amp; Statistics <code>[0/62]</code></h3>
+<div class="outline-text-3" id="text-org10fa544">
+</div>
+<div id="outline-container-org16bdf87" class="outline-4">
+<h4 id="org16bdf87">Unit 1: Scientific Research – Meaning, Characteristics &amp; Ethics</h4>
+<div class="outline-text-4" id="text-org16bdf87">
+</div>
+<ul class="org-ul">
+<li><a id="org2e6c028"></a><span class="todo TODO">TODO</span> Introduction to scientific research<br /></li>
+<li><a id="orgec1c740"></a><span class="todo TODO">TODO</span> Methods of acquiring knowledge<br /></li>
+<li><a id="orga75944a"></a><span class="todo TODO">TODO</span> Basic assumptions<br /></li>
+<li><a id="orge552f37"></a><span class="todo TODO">TODO</span> Characteristics of scientific research<br /></li>
+<li><a id="org6f4cd24"></a><span class="todo TODO">TODO</span> Objectives of psychological research<br /></li>
+<li><a id="orgc8e3687"></a><span class="todo TODO">TODO</span> Ethics in research<br /></li>
+<li><a id="org8d5a49a"></a><span class="todo TODO">TODO</span> Areas of ethical concern<br /></li>
+<li><a id="org61e6c9c"></a><span class="todo TODO">TODO</span> Ethical dilemmas<br /></li>
+<li><a id="org3eb02db"></a><span class="todo TODO">TODO</span> Ethical guidelines<br /></li>
+<li><a id="orgb09672f"></a><span class="todo TODO">TODO</span> Ethical issues<br /></li>
+<li><a id="org87d57c7"></a><span class="todo TODO">TODO</span> Ethics of animal research<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgff2dacf" class="outline-4">
+<h4 id="orgff2dacf">Unit 2: Psychological Testing</h4>
+<div class="outline-text-4" id="text-orgff2dacf">
+</div>
+<ul class="org-ul">
+<li><a id="orga600b7f"></a><span class="todo TODO">TODO</span> Nature of psychological tests<br /></li>
+<li><a id="org6c776ff"></a><span class="todo TODO">TODO</span> Classification of tests<br /></li>
+<li><a id="org886079a"></a><span class="todo TODO">TODO</span> Test vs questionnaire vs inventory vs battery<br /></li>
+<li><a id="org7d46262"></a><span class="todo TODO">TODO</span> Test standardization<br /></li>
+<li><a id="org7d50a08"></a><span class="todo TODO">TODO</span> Steps in test construction<br /></li>
+<li><a id="org5e6f5d7"></a><span class="todo TODO">TODO</span> Item writing<br /></li>
+<li><a id="orgd94a99f"></a><span class="todo TODO">TODO</span> Item analysis<br /></li>
+<li><a id="org973192e"></a><span class="todo TODO">TODO</span> Item difficulty<br /></li>
+<li><a id="org713ad0c"></a><span class="todo TODO">TODO</span> Item discrimination<br /></li>
+<li><a id="org0e34899"></a><span class="todo TODO">TODO</span> Educational applications<br /></li>
+<li><a id="orgf4b1a3b"></a><span class="todo TODO">TODO</span> Occupational applications<br /></li>
+<li><a id="org8542f06"></a><span class="todo TODO">TODO</span> Clinical applications<br /></li>
+</ul>
+</div>
+<div id="outline-container-org379cfb8" class="outline-4">
+<h4 id="org379cfb8">Unit 3: Descriptive Statistics</h4>
+<div class="outline-text-4" id="text-org379cfb8">
+</div>
+<ul class="org-ul">
+<li><a id="org4067cbd"></a><span class="todo TODO">TODO</span> Normal distribution – meaning<br /></li>
+<li><a id="orgdc6810b"></a><span class="todo TODO">TODO</span> Characteristics<br /></li>
+<li><a id="org01224ad"></a><span class="todo TODO">TODO</span> Applications<br /></li>
+<li><a id="org11f7720"></a><span class="todo TODO">TODO</span> Skewness<br /></li>
+<li><a id="orgd1c8ef2"></a><span class="todo TODO">TODO</span> Kurtosis<br /></li>
+<li><a id="org2e8a532"></a><span class="todo TODO">TODO</span> Mean<br /></li>
+<li><a id="org789e83c"></a><span class="todo TODO">TODO</span> Median<br /></li>
+<li><a id="orgbf70d71"></a><span class="todo TODO">TODO</span> Mode<br /></li>
+<li><a id="org2ac5758"></a><span class="todo TODO">TODO</span> Standard deviation<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgddaebaa" class="outline-4">
+<h4 id="orgddaebaa">Unit 4: Measurement and Sampling Techniques</h4>
+<div class="outline-text-4" id="text-orgddaebaa">
+</div>
+<ul class="org-ul">
+<li><a id="orgdc608ff"></a><span class="todo TODO">TODO</span> Scales of measurement<br /></li>
+<li><a id="org834599c"></a><span class="todo TODO">TODO</span> Psychological scaling methods<br /></li>
+<li><a id="orgadb98fa"></a><span class="todo TODO">TODO</span> Reliability – meaning<br /></li>
+<li><a id="org78dac54"></a><span class="todo TODO">TODO</span> Types of reliability<br /></li>
+<li><a id="org286d580"></a><span class="todo TODO">TODO</span> Validity – meaning<br /></li>
+<li><a id="org63a0136"></a><span class="todo TODO">TODO</span> Types of validity<br /></li>
+<li><a id="org0f9cb14"></a><span class="todo TODO">TODO</span> Special issues in reliability and validity<br /></li>
+<li><a id="org922501d"></a><span class="todo TODO">TODO</span> Sampling methods<br /></li>
+<li><a id="org1610e9e"></a><span class="todo TODO">TODO</span> Sampling terminology<br /></li>
+<li><a id="orgef4d28f"></a><span class="todo TODO">TODO</span> Random sampling<br /></li>
+<li><a id="org24a07fa"></a><span class="todo TODO">TODO</span> Non-random sampling<br /></li>
+<li><a id="org433f04f"></a><span class="todo TODO">TODO</span> Sample size determination<br /></li>
+<li><a id="org2f3966f"></a><span class="todo TODO">TODO</span> Sampling in qualitative research<br /></li>
+</ul>
+</div>
+<div id="outline-container-org7096f22" class="outline-4">
+<h4 id="org7096f22">Unit 5: Research Approaches</h4>
+<div class="outline-text-4" id="text-org7096f22">
+</div>
+<ul class="org-ul">
+<li><a id="org22c3165"></a><span class="todo TODO">TODO</span> Quantitative research<br /></li>
+<li><a id="orgede10e2"></a><span class="todo TODO">TODO</span> Experimental research<br /></li>
+<li><a id="orgffaf186"></a><span class="todo TODO">TODO</span> Causation<br /></li>
+<li><a id="org30f5af3"></a><span class="todo TODO">TODO</span> Characteristics<br /></li>
+<li><a id="orgbb88ef6"></a><span class="todo TODO">TODO</span> Experimental settings<br /></li>
+<li><a id="orge75e914"></a><span class="todo TODO">TODO</span> Correlational research<br /></li>
+<li><a id="org1d06d23"></a><span class="todo TODO">TODO</span> Natural manipulation<br /></li>
+<li><a id="orgaa43aa6"></a><span class="todo TODO">TODO</span> Cross-sectional research<br /></li>
+<li><a id="orge276a73"></a><span class="todo TODO">TODO</span> Cross-cultural research<br /></li>
+<li><a id="org14c83f4"></a><span class="todo TODO">TODO</span> Longitudinal research<br /></li>
+<li><a id="orgf1d426b"></a><span class="todo TODO">TODO</span> Qualitative research<br /></li>
+<li><a id="orgc132738"></a><span class="todo TODO">TODO</span> Focus groups<br /></li>
+<li><a id="orgda4dd9c"></a><span class="todo TODO">TODO</span> Grounded theory<br /></li>
+<li><a id="orgc309552"></a><span class="todo TODO">TODO</span> Phenomenological research<br /></li>
+<li><a id="org2034506"></a><span class="todo TODO">TODO</span> Narrative analysis<br /></li>
+<li><a id="org5931405"></a><span class="todo TODO">TODO</span> Interviews<br /></li>
+<li><a id="org4848b82"></a><span class="todo TODO">TODO</span> Case studies<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org10fad83" class="outline-3">
+<h3 id="org10fad83">Biopsychology / Physiological Psychology <code>[0/61]</code></h3>
+<div class="outline-text-3" id="text-org10fad83">
+</div>
+<div id="outline-container-org1ed4ebb" class="outline-4">
+<h4 id="org1ed4ebb">Unit 1: Brain, Behaviour, and Nervous System</h4>
+<div class="outline-text-4" id="text-org1ed4ebb">
+</div>
+<ul class="org-ul">
+<li><a id="orgd4aa1c4"></a><span class="todo TODO">TODO</span> Biopsychology – nature and scope<br /></li>
+<li><a id="orga64f411"></a><span class="todo TODO">TODO</span> Methods of studying the brain<br /></li>
+<li><a id="org3ce5d28"></a><span class="todo TODO">TODO</span> Ablation<br /></li>
+<li><a id="org799d155"></a><span class="todo TODO">TODO</span> Recording<br /></li>
+<li><a id="org953d15c"></a><span class="todo TODO">TODO</span> Simulation<br /></li>
+<li><a id="org728b8d9"></a><span class="todo TODO">TODO</span> Neurochemical methods<br /></li>
+<li><a id="org1170033"></a><span class="todo TODO">TODO</span> Nervous system – structure<br /></li>
+<li><a id="orgceea0ea"></a><span class="todo TODO">TODO</span> Nervous system – functions<br /></li>
+<li><a id="org9d7e050"></a><span class="todo TODO">TODO</span> Central nervous system<br /></li>
+<li><a id="org745338c"></a><span class="todo TODO">TODO</span> Peripheral nervous system<br /></li>
+<li><a id="org35ea5bd"></a><span class="todo TODO">TODO</span> Neurons – structure<br /></li>
+<li><a id="org52c1eb7"></a><span class="todo TODO">TODO</span> Types of neurons<br /></li>
+<li><a id="orgd7d44e4"></a><span class="todo TODO">TODO</span> Functions of neurons<br /></li>
+<li><a id="org6f6fa16"></a><span class="todo TODO">TODO</span> Neuronal conduction<br /></li>
+<li><a id="org3373218"></a><span class="todo TODO">TODO</span> Synaptic transmission<br /></li>
+<li><a id="org2fecbb6"></a><span class="todo TODO">TODO</span> Neurotransmitters<br /></li>
+<li><a id="org8a826d7"></a><span class="todo TODO">TODO</span> Neurotransmitter systems<br /></li>
+<li><a id="org7a73983"></a><span class="todo TODO">TODO</span> Neurotransmitters and behaviour<br /></li>
+</ul>
+</div>
+<div id="outline-container-org37bda48" class="outline-4">
+<h4 id="org37bda48">Unit 2: Neuropsychology</h4>
+<div class="outline-text-4" id="text-org37bda48">
+</div>
+<ul class="org-ul">
+<li><a id="org598b184"></a><span class="todo TODO">TODO</span> Human brain and cognition<br /></li>
+<li><a id="org8b302ad"></a><span class="todo TODO">TODO</span> Cerebral asymmetry<br /></li>
+<li><a id="org2072fe2"></a><span class="todo TODO">TODO</span> Intelligence<br /></li>
+<li><a id="org164c59f"></a><span class="todo TODO">TODO</span> Memory<br /></li>
+<li><a id="org298238c"></a><span class="todo TODO">TODO</span> Learning<br /></li>
+<li><a id="org9bc2f7a"></a><span class="todo TODO">TODO</span> Endocrine system – functions<br /></li>
+<li><a id="org202bba0"></a><span class="todo TODO">TODO</span> Endocrine system – effects<br /></li>
+<li><a id="orgb21018b"></a><span class="todo TODO">TODO</span> Neurological disorders<br /></li>
+<li><a id="org2984c5b"></a><span class="todo TODO">TODO</span> Tumors<br /></li>
+<li><a id="orgfbdf90b"></a><span class="todo TODO">TODO</span> Seizures<br /></li>
+<li><a id="org464e472"></a><span class="todo TODO">TODO</span> Parkinson’s disease<br /></li>
+<li><a id="org7e33489"></a><span class="todo TODO">TODO</span> Huntington’s disease<br /></li>
+<li><a id="orgb38c731"></a><span class="todo TODO">TODO</span> Alzheimer’s disease<br /></li>
+<li><a id="org6ea5fd7"></a><span class="todo TODO">TODO</span> Multiple sclerosis<br /></li>
+<li><a id="org4cd6a0c"></a><span class="todo TODO">TODO</span> Neurological assessment<br /></li>
+<li><a id="org0b82341"></a><span class="todo TODO">TODO</span> Neurological testing<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgd2df040" class="outline-4">
+<h4 id="orgd2df040">Unit 3: Behaviour Genetics</h4>
+<div class="outline-text-4" id="text-orgd2df040">
+</div>
+<ul class="org-ul">
+<li><a id="org726ecdc"></a><span class="todo TODO">TODO</span> Behaviour genetics – nature<br /></li>
+<li><a id="orge31e089"></a><span class="todo TODO">TODO</span> Behaviour genetics – scope<br /></li>
+<li><a id="orga65253a"></a><span class="todo TODO">TODO</span> Research methods<br /></li>
+<li><a id="orgb6d5fe2"></a><span class="todo TODO">TODO</span> Chromosomal functions<br /></li>
+<li><a id="orgc44333e"></a><span class="todo TODO">TODO</span> Hereditary determinants<br /></li>
+<li><a id="org0ab8b72"></a><span class="todo TODO">TODO</span> Eugenics<br /></li>
+<li><a id="org2443614"></a><span class="todo TODO">TODO</span> Genetic engineering<br /></li>
+</ul>
+</div>
+<div id="outline-container-org689bc01" class="outline-4">
+<h4 id="org689bc01">Unit 4: Brain and Internal Regulatory States</h4>
+<div class="outline-text-4" id="text-org689bc01">
+</div>
+<ul class="org-ul">
+<li><a id="org7d97859"></a><span class="todo TODO">TODO</span> Structure of the brain<br /></li>
+<li><a id="org7ed7e1b"></a><span class="todo TODO">TODO</span> Functions of the brain<br /></li>
+<li><a id="orgd87270b"></a><span class="todo TODO">TODO</span> Brain lobes<br /></li>
+<li><a id="orge17ef96"></a><span class="todo TODO">TODO</span> Functions of brain lobes<br /></li>
+<li><a id="org708539a"></a><span class="todo TODO">TODO</span> Brain correlates of pain<br /></li>
+<li><a id="org119561e"></a><span class="todo TODO">TODO</span> Brain correlates of balance<br /></li>
+<li><a id="orgf29e42f"></a><span class="todo TODO">TODO</span> Endocrinal systems<br /></li>
+<li><a id="org6790fe6"></a><span class="todo TODO">TODO</span> Homeostasis<br /></li>
+</ul>
+</div>
+<div id="outline-container-org68fd430" class="outline-4">
+<h4 id="org68fd430">Unit 5: Sensation, Perception, and Movement</h4>
+<div class="outline-text-4" id="text-org68fd430">
+</div>
+<ul class="org-ul">
+<li><a id="org6cb48f4"></a><span class="todo TODO">TODO</span> Brain correlates of vision<br /></li>
+<li><a id="org1635d2c"></a><span class="todo TODO">TODO</span> Brain correlates of audition<br /></li>
+<li><a id="org03eb1af"></a><span class="todo TODO">TODO</span> Brain correlates of olfaction<br /></li>
+<li><a id="orgd04d0b8"></a><span class="todo TODO">TODO</span> Brain correlates of gustation<br /></li>
+<li><a id="orgc4ed9c2"></a><span class="todo TODO">TODO</span> Brain correlates of tactile sensation<br /></li>
+<li><a id="org0c751ac"></a><span class="todo TODO">TODO</span> Perceptual processes<br /></li>
+<li><a id="org427a3a4"></a><span class="todo TODO">TODO</span> Motor functions<br /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgee1eda9" class="outline-3">
+<h3 id="orgee1eda9">Health Psychology <code>[0/74]</code></h3>
+<div class="outline-text-3" id="text-orgee1eda9">
+</div>
+<div id="outline-container-org63378f8" class="outline-4">
+<h4 id="org63378f8">Unit I: Introduction</h4>
+<div class="outline-text-4" id="text-org63378f8">
+</div>
+<ul class="org-ul">
+<li><a id="org023df85"></a><span class="todo TODO">TODO</span> Definition of health psychology<br /></li>
+<li><a id="org46750f3"></a><span class="todo TODO">TODO</span> History of health psychology<br /></li>
+<li><a id="org2ad25fc"></a><span class="todo TODO">TODO</span> Biopsychosocial model<br /></li>
+<li><a id="orgbf992ee"></a><span class="todo TODO">TODO</span> Biomedical model<br /></li>
+<li><a id="org5212a4d"></a><span class="todo TODO">TODO</span> Comparison of biopsychosocial vs. biomedical model<br /></li>
+<li><a id="org7c0d966"></a><span class="todo TODO">TODO</span> Experimental methods<br /></li>
+<li><a id="org949eb97"></a><span class="todo TODO">TODO</span> Correlational studies<br /></li>
+<li><a id="org4377725"></a><span class="todo TODO">TODO</span> Prospective studies<br /></li>
+<li><a id="org0ba925b"></a><span class="todo TODO">TODO</span> Retrospective studies<br /></li>
+<li><a id="org1c20df1"></a><span class="todo TODO">TODO</span> Illness cognition<br /></li>
+<li><a id="orgc61b7ff"></a><span class="todo TODO">TODO</span> Meaning of being healthy<br /></li>
+<li><a id="org8fd7d3f"></a><span class="todo TODO">TODO</span> Abnormal illness behaviour<br /></li>
+<li><a id="orgcc59bbe"></a><span class="todo TODO">TODO</span> Eastern perspectives on health<br /></li>
+</ul>
+</div>
+<div id="outline-container-org2b0322a" class="outline-4">
+<h4 id="org2b0322a">Unit II: Stress and Modification</h4>
+<div class="outline-text-4" id="text-org2b0322a">
+</div>
+<ul class="org-ul">
+<li><a id="org15f322f"></a><span class="todo TODO">TODO</span> Meaning of stress<br /></li>
+<li><a id="org54f67ab"></a><span class="todo TODO">TODO</span> Cannon’s theory of stress<br /></li>
+<li><a id="orga3529f8"></a><span class="todo TODO">TODO</span> Selye’s theory of stress<br /></li>
+<li><a id="orge0eb76a"></a><span class="todo TODO">TODO</span> Lazarus’ theory of stress<br /></li>
+<li><a id="orgb007878"></a><span class="todo TODO">TODO</span> Subjective correlates of stress<br /></li>
+<li><a id="orgc24f629"></a><span class="todo TODO">TODO</span> Coping with stress<br /></li>
+<li><a id="org92bec10"></a><span class="todo TODO">TODO</span> Nature of coping<br /></li>
+<li><a id="org9cd19c2"></a><span class="todo TODO">TODO</span> Coping strategies<br /></li>
+<li><a id="org6744880"></a><span class="todo TODO">TODO</span> Measuring coping<br /></li>
+<li><a id="orgcdb326f"></a><span class="todo TODO">TODO</span> Social support<br /></li>
+<li><a id="org079e336"></a><span class="todo TODO">TODO</span> Modification of health behaviour<br /></li>
+<li><a id="orga076cd5"></a><span class="todo TODO">TODO</span> Changing health habits<br /></li>
+<li><a id="orgf11f184"></a><span class="todo TODO">TODO</span> Cognitive–behavioural approaches to health behaviour change<br /></li>
+<li><a id="orgb9dd273"></a><span class="todo TODO">TODO</span> Health-enhancing behaviour<br /></li>
+<li><a id="orgfa4c44e"></a><span class="todo TODO">TODO</span> Exercise<br /></li>
+<li><a id="org070d391"></a><span class="todo TODO">TODO</span> Healthy diet and food habits<br /></li>
+<li><a id="orgdc494ec"></a><span class="todo TODO">TODO</span> Weight control<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgd750926" class="outline-4">
+<h4 id="orgd750926">Unit III: Addictive Behaviour and Lifestyle Disorders</h4>
+<div class="outline-text-4" id="text-orgd750926">
+</div>
+<ul class="org-ul">
+<li><a id="org5f02590"></a><span class="todo TODO">TODO</span> Addiction<br /></li>
+<li><a id="org98046f1"></a><span class="todo TODO">TODO</span> Factors involved in learning addictive behaviour<br /></li>
+<li><a id="org7d3270f"></a><span class="todo TODO">TODO</span> Stages of substance abuse<br /></li>
+<li><a id="org6125f4c"></a><span class="todo TODO">TODO</span> Interventions to promote cessation<br /></li>
+<li><a id="org0895f2e"></a><span class="todo TODO">TODO</span> Coronary heart disease (CHD) – nature<br /></li>
+<li><a id="org0ca8796"></a><span class="todo TODO">TODO</span> Women and CHD<br /></li>
+<li><a id="org2851d2b"></a><span class="todo TODO">TODO</span> Cardiovascular reactivity and CHD<br /></li>
+<li><a id="orgbbb583f"></a><span class="todo TODO">TODO</span> Hostility and CHD<br /></li>
+<li><a id="orgd7f5ebf"></a><span class="todo TODO">TODO</span> Depression and CHD<br /></li>
+<li><a id="org3f4ad65"></a><span class="todo TODO">TODO</span> Type A behaviour<br /></li>
+<li><a id="orge26fed2"></a><span class="todo TODO">TODO</span> Hypertension<br /></li>
+</ul>
+</div>
+<div id="outline-container-orgfde18da" class="outline-4">
+<h4 id="orgfde18da">Unit IV: Pain</h4>
+<div class="outline-text-4" id="text-orgfde18da">
+</div>
+<ul class="org-ul">
+<li><a id="org3fc1045"></a><span class="todo TODO">TODO</span> Nature of pain<br /></li>
+<li><a id="org03ec153"></a><span class="todo TODO">TODO</span> Early theories of pain<br /></li>
+<li><a id="org8179fd9"></a><span class="todo TODO">TODO</span> Psychological perspectives in pain theories<br /></li>
+<li><a id="org2b0107e"></a><span class="todo TODO">TODO</span> Gate control theory of pain<br /></li>
+<li><a id="orgef0dfdc"></a><span class="todo TODO">TODO</span> Psychosocial factors in pain perception<br /></li>
+<li><a id="org8de0b81"></a><span class="todo TODO">TODO</span> Subjective processes in pain<br /></li>
+<li><a id="org894461e"></a><span class="todo TODO">TODO</span> Affective processes in pain<br /></li>
+<li><a id="orgd6c32c8"></a><span class="todo TODO">TODO</span> Cognitive processes in pain<br /></li>
+<li><a id="orgcc3afd4"></a><span class="todo TODO">TODO</span> Role of psychology in pain treatment<br /></li>
+<li><a id="org5f2a947"></a><span class="todo TODO">TODO</span> Cognitive behavioural therapy (CBT) for pain<br /></li>
+<li><a id="org1c6406f"></a><span class="todo TODO">TODO</span> Psychological interventions for pain management<br /></li>
+<li><a id="org1627459"></a><span class="todo TODO">TODO</span> Pain control techniques<br /></li>
+<li><a id="org44e05ec"></a><span class="todo TODO">TODO</span> Pharmacological methods<br /></li>
+<li><a id="orgb537b0d"></a><span class="todo TODO">TODO</span> Surgical methods<br /></li>
+<li><a id="org52d0be1"></a><span class="todo TODO">TODO</span> Sensory methods<br /></li>
+<li><a id="orgd7035f7"></a><span class="todo TODO">TODO</span> Biofeedback<br /></li>
+<li><a id="orgdafbafa"></a><span class="todo TODO">TODO</span> Relaxation techniques<br /></li>
+<li><a id="org092bdc0"></a><span class="todo TODO">TODO</span> Hypnosis<br /></li>
+<li><a id="org52643d8"></a><span class="todo TODO">TODO</span> Acupuncture<br /></li>
+<li><a id="org885a0df"></a><span class="todo TODO">TODO</span> Distraction techniques<br /></li>
+<li><a id="org457b5b4"></a><span class="todo TODO">TODO</span> Guided imagery<br /></li>
+</ul>
+</div>
+<div id="outline-container-org00924b4" class="outline-4">
+<h4 id="org00924b4">Unit V: Intervention</h4>
+<div class="outline-text-4" id="text-org00924b4">
+</div>
+<ul class="org-ul">
+<li><a id="org7539715"></a><span class="todo TODO">TODO</span> Leventhal’s self-regulatory model of illness cognition<br /></li>
+<li><a id="org4e2483a"></a><span class="todo TODO">TODO</span> Coping with chronic illness<br /></li>
+<li><a id="org648fad1"></a><span class="todo TODO">TODO</span> Psychological management of the terminally ill<br /></li>
+<li><a id="org951aab0"></a><span class="todo TODO">TODO</span> Health-care interventions based on psychological theories<br /></li>
+<li><a id="org2b0b1d3"></a><span class="todo TODO">TODO</span> Health practitioners and patient reactions<br /></li>
+<li><a id="org82818bb"></a><span class="todo TODO">TODO</span> Role of knowledge in health care<br /></li>
+<li><a id="org761efaa"></a><span class="todo TODO">TODO</span> Health professionals’ health beliefs<br /></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: ro</p>
+<p class="date">Created: 2025-12-25 Thu 14:37</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
